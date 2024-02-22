@@ -1,3 +1,5 @@
+CONFIGURAÇÃO
+
 1 - Abrir o bash numa pasta
 2 - git clone https://github.com/tassiogomes/GymTrend-Task-Force.git
 	isso clona o conteúdo do repositório pra sua máquina, apenas o conteúdo.
@@ -9,3 +11,25 @@
 5 - git push upstream main
 	quando fizer push, fazer pro main.
 
+
+UTILIZAÇÃO
+
+1 - git pull
+	puxa todos os dados do repositorio online (site github) pra sua maquina.
+	fazer isso toda vez antes de mandar algo, senao da conflito.
+
+2 - git status
+	verifica os arquivos que voce adicionou e mudou que vão ser mandados.
+	os nomes ficam em vermelho, é normal.
+
+3 - git add .
+	o . manda todos os arquivos modificados, se quiser mandar um especifico, substitua pelo nome
+	ex: git add arquivo1.pbix.
+	o mais comum é mandar logo tudo com o .
+	se fizer git status depois disso os nomes estarão verdes, pq foram adicionados.
+
+4 - git commit -m "Descricao do que voce fez"
+	manda os dados pra uma area entre a sua maquina e o online com uma descricao colocada por nós.
+
+5 - git push
+	envia tudo pro repositorio online (site github) e todos tem acesso fazendo git pull pra nossa máquina.
