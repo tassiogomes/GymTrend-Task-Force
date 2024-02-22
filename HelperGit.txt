@@ -1,0 +1,11 @@
+1 - Abrir o bash numa pasta
+2 - git clone https://github.com/tassiogomes/GymTrend-Task-Force.git
+	isso clona o conteúdo do repositório pra sua máquina, apenas o conteúdo.
+3 - Entrar na pasta que o repositório está
+	cd GymTrend-Task-Force-Clone
+4 - git remote add upstream https://github.com/tassiogomes/GymTrend-Task-Force.git
+	upstream é um nome comum dado ao repositório original. Assim, quando quiser
+ 	fazer push de mudanças para o seu repositório, usará git push upstream.
+5 - git push upstream main
+	quando fizer push, fazer pro main.
+
