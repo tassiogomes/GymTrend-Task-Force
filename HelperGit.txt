@@ -13,7 +13,7 @@ CONFIGURAÇÃO
 
 6 - Irá pedir login
 
-
+asdasd
 UTILIZAÇÃO
 
 1 - git pull
