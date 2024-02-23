@@ -1,0 +1,438 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"GinasiosEmPortugal\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.126.927.0 (24.02)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DateTableTemplate_94ec6057-8ca1-4ec2-9072-5c94a420e57c",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "30593ecb-5fee-4d2a-8e5f-7d0dca157af2",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3c90c8ee-1800-4a93-b511-55d603e09d8f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "fdfa8e96-7a58-41cc-9703-c6bac83ba41b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "a9f73d99-9288-4f0a-b30c-e51cf79177a0",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f9a0a3a8-55c9-42ea-80d7-5bdba82ac3b7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "106cc1a5-7616-43cf-8bbf-59a3d876abbd",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "74baa11f-fbe7-443d-a764-4584885c2c5b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "4e130216-a461-4b62-ae18-03a35db81268",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "7ce7c6a3-ebbc-401f-a731-f098e1eaa906",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "eca27f50-9ad8-48de-97fd-b2d04c162de0",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "cd9b403c-f2a4-466f-9a9c-529d3724bf5d",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "dd58607f-d189-43c2-a481-7fdced23fd8f"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "013da1d1-977d-453c-9170-82fa15706e75",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_94ec6057-8ca1-4ec2-9072-5c94a420e57c",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "GinasiosEmPortugal",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9796b8a7-573d-4e16-94d3-83a27fc52a9e",
+            "sourceColumn": "title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55bc8e9e-fa7a-48d1-b9df-4906f03e6905",
+            "sourceColumn": "address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "87848ac4-76c2-4a87-b5af-a0c2fede1faa",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "categories/0",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fc557440-eda3-4c2f-a1cd-3f8925afb8c9",
+            "sourceColumn": "categories/0",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "totalScore",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2d842492-d804-442b-a43a-af73807fe296",
+            "sourceColumn": "totalScore",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "reviewsCount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "11ef8acd-e13a-47fa-80b6-1d42d39ef36e",
+            "sourceColumn": "reviewsCount",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "4846d446-8142-406a-8600-7af78ac0e768",
+        "measures": [
+          {
+            "name": "SomaReviews",
+            "displayFolder": "_Metrics",
+            "expression": [
+              "",
+              "",
+              "// soma do campo reviewsCount",
+              "",
+              "SUM(GinasiosEmPortugal[reviewsCount])"
+            ],
+            "formatString": "0",
+            "lineageTag": "29b9a6b3-789d-4a2f-8eab-d3714c43706b"
+          },
+          {
+            "name": "MediaReviews",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "_Metrics",
+            "expression": [
+              "",
+              "",
+              "// média dos reviewCount",
+              "",
+              "AVERAGE(GinasiosEmPortugal[reviewsCount])"
+            ],
+            "lineageTag": "4dc95cdf-9936-4d7e-8a43-21c0e0a75cdc"
+          },
+          {
+            "name": "SomaTotalScore",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "_Metrics",
+            "expression": [
+              "",
+              "",
+              "//soma do total score",
+              "",
+              "SUM(GinasiosEmPortugal[totalScore])",
+              "",
+              ""
+            ],
+            "lineageTag": "6a5d1249-a5ec-4ced-8864-9f5331d2272b"
+          },
+          {
+            "name": "MediaTotalScore",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "displayFolder": "_Metrics",
+            "expression": "AVERAGE(GinasiosEmPortugal[totalScore])",
+            "lineageTag": "90e4196b-ee95-412d-b6e9-f5595f119d77"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "GinasiosEmPortugal",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Ciellos\\GymTrendTaskForce\\Arquivos\\Dataset\\resultado.xlsx\"), null, true),",
+                "    GinasiosEmPortugal_Sheet = Source{[Item=\"GinasiosEmPortugal\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(GinasiosEmPortugal_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"title\", type text}, {\"address\", type text}, {\"city\", type text}, {\"categories/0\", type text}, {\"totalScore\", type number}, {\"reviewsCount\", Int64.Type}}),",
+                "    #\"Removed Blank Rows\" = Table.SelectRows(#\"Changed Type\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null})))",
+                "in",
+                "    #\"Removed Blank Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

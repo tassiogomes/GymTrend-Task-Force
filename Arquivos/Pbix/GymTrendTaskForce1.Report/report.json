@@ -1,0 +1,90 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"287627d08809b9b30d97\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225.33333333333334,\"y\":0,\"z\":0,\"width\":537.3333333333334,\"height\":720}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"AcessosConcelho.Cidade\"},{\"queryRef\":\"Sum(AcessosConcelho.ginasio: (2023))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"AcessosConcelho\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Cidade\"},\"Name\":\"AcessosConcelho.Cidade\",\"NativeReferenceName\":\"Cidade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ginasio: (2023)\"},\"Name\":\"Sum(AcessosConcelho.ginasio: (2023))\",\"NativeReferenceName\":\"ginasio: (2023)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ginasio: (2023)\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 537.33,
+          "x": 225.33,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb211d9500c0a09070269",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"067f063ac901cb7d9010\",\"layouts\":[{\"id\":0,\"position\":{\"x\":104.34850771130142,\"y\":0,\"z\":0,\"width\":536.1907934703796,\"height\":430.23692410198123,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"GinasiosEmPortugal.city\"},{\"queryRef\":\"Sum(GinasiosEmPortugal.reviewsCount)\"},{\"queryRef\":\"Sum(GinasiosEmPortugal.totalScore)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"GinasiosEmPortugal\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"city\"},\"Name\":\"GinasiosEmPortugal.city\",\"NativeReferenceName\":\"city\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"reviewsCount\"}},\"Function\":0},\"Name\":\"Sum(GinasiosEmPortugal.reviewsCount)\",\"NativeReferenceName\":\"Sum of reviewsCount\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"totalScore\"}},\"Function\":0},\"Name\":\"Sum(GinasiosEmPortugal.totalScore)\",\"NativeReferenceName\":\"Soma de totalScore\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 430.24,
+          "width": 536.19,
+          "x": 104.35,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"17c6fbfc457c295d041a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":700.9271523178808,\"y\":430.7284768211921,\"z\":2001,\"width\":217.74834437086093,\"height\":267.0198675496689,\"tabOrder\":2001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"GinasiosEmPortugal.MediaTotalScore\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"GinasiosEmPortugal\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"MediaTotalScore\"},\"Name\":\"GinasiosEmPortugal.MediaTotalScore\",\"NativeReferenceName\":\"MediaTotalScore\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"MediaTotalScore\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 267.02,
+          "width": 217.75,
+          "x": 700.93,
+          "y": 430.73,
+          "z": 2001.00
+        },
+        {
+          "config": "{\"name\":\"67c4e205a5aae93864dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":918.639455782313,\"y\":0,\"width\":310.56689342403627,\"height\":429.5691609977324,\"z\":1000,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"GinasiosEmPortugal.title\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"GinasiosEmPortugal\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"title\"},\"Name\":\"GinasiosEmPortugal.title\",\"NativeReferenceName\":\"title\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"title\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 429.57,
+          "width": 310.57,
+          "x": 918.64,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ee622fea30b03c09e85b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":321.25,\"y\":417.5,\"z\":2000,\"width\":305,\"height\":278.75,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 278.75,
+          "width": 305.00,
+          "x": 321.25,
+          "y": 417.50,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
