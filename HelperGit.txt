@@ -35,3 +35,7 @@ UTILIZAÇÃO
 
 5 - git push
 	envia tudo pro repositorio online (site github) e todos tem acesso fazendo git pull pra nossa máquina.
+
+Addicional - git reset --hard HEAD~1
+voltar 1 commit para tras  sem perguntar 
+vai informar em que commit estás.
