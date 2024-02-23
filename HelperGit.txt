@@ -11,6 +11,8 @@ CONFIGURAÇÃO
 5 - git push upstream main
 	quando fizer push, fazer pro main.
 
+6 - Irá pedir login
+
 
 UTILIZAÇÃO
 
